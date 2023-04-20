@@ -1,0 +1,17 @@
+.card {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  height: 130px;
+}
+.user-btn {
+  align-self: flex-end;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+.green {
+  border: 3px solid #ADFF2F;
+}
+.red {
+  border: 3px solid #FF0000;
+}

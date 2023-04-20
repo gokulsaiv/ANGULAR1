@@ -1,0 +1,14 @@
+<div
+  class="card w-100"
+  *ngFor="let user of userData"
+  [ngStyle]="borderClass(user.isDeleted)"
+>
+  <div class="card-body">
+    <h5 class="card-title">{{ user.firstName }} {{ user.lastName }}</h5>
+  </div>
+  <div class="user-btn">
+    <a class="btn btn-primary btn-lg" (click)="changeUserStatus(user.id)">{{
+      btnLable
+    }}</a>
+  </div>
+</div>

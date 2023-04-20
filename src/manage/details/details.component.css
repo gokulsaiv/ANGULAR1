@@ -1,0 +1,10 @@
+.details{
+   display: flex;
+   flex-direction: row; 
+   justify-content: space-between;
+}
+.card{
+    margin-top: 30px;
+    font-size: medium;
+    font-weight: 500;
+}
