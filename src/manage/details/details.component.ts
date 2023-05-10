@@ -6,16 +6,16 @@ import {
   DoCheck,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
-} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { UserService } from 'src/Services/user.service';
-import { User } from 'src/User/user/User.interface';
+} from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { Observable } from "rxjs";
+import { UserService } from "src/Services/user.service";
+import { User } from "src/User/user/User.interface";
 
 @Component({
-  selector: 'app-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css'],
+  selector: "app-details",
+  templateUrl: "./details.component.html",
+  styleUrls: ["./details.component.css"],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DetailsComponent implements OnInit {
@@ -24,11 +24,11 @@ export class DetailsComponent implements OnInit {
   id: any;
   uData!: Observable<any>;
   //user Data feilds
-  firstName!: string;
-  lastName!: string;
+  firstName$!: string;
+  lastName$!: string;
   age!: number;
   loginId!: string;
-  isDeleted!: string;
+  isDeleted!: boolean;
 
   constructor(
     private router: ActivatedRoute,
@@ -39,24 +39,24 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
     this.user.emitUser.subscribe((userData: any) => {
       this.ref.markForCheck();
+      console.log(userData);
 
-      this.firstName = userData.firstName;
-      this.lastName = userData.lastName;
+      this.firstName$ = userData.firstName;
+      this.lastName$ = userData.lastName;
       this.age = userData.age;
-      userData.isDeleted
-        ? (this.isDeleted = 'InActive')
-        : (this.isDeleted = 'Active');
+
+      this.isDeleted = userData.isDeleted;
       this.loginId = userData.login;
     });
   }
-  StatusStyle(status: string): any {
-    if (status == 'Active') {
+  StatusStyle(status: boolean): any {
+    if (!status) {
       return {
-        color: '#ADFF2F',
+        color: "#ADFF2F",
       };
     } else {
       return {
-        color: '#FF0000',
+        color: "#FF0000",
       };
     }
   }

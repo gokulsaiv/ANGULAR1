@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReadService } from 'src/Services/read.service';
 import { UserService } from 'src/Services/user.service';
 import { User } from 'src/User/user/User.interface';
 
@@ -10,17 +11,18 @@ import { User } from 'src/User/user/User.interface';
 export class DeletedComponent implements OnInit {
   Users!: any;
   UserFilter!: User[];
-  constructor(private users: UserService) {}
+  constructor(private users: UserService,private read:ReadService) {}
   ngOnInit(): void {
-    this.Users = this.users.Users.map((user: User): any => {
-      if (user.isDeleted) {
-        return user;
-      }
-    });
-    this.UserFilter = this.Users.filter((user: User): any => {
-      if (user) {
-        return user;
-      }
-    });
+    this.read.getUsers().subscribe((user:any)=>{
+      
+      this.UserFilter=user.filter((user:any)=>{
+        return user.isDeleted===true;
+      })
+      
+      
+    })
+    
+    
+   
   }
 }

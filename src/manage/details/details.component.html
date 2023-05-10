@@ -1,8 +1,8 @@
 <div class="card" style="width: 18rem">
   <div class="card-body">
-    <h4 class="card-title">{{ firstName }} {{ lastName }}</h4>
+    <h4 class="card-title">{{ firstName$ }} {{ lastName$ }}</h4>
     <h6 class="card-subtitle mb-2" [ngStyle]="StatusStyle(isDeleted)">
-      {{ isDeleted }}
+      {{ this.isDeleted|status }}
     </h6>
     <div class="details">
       <p>Login:</p>
@@ -10,11 +10,11 @@
     </div>
     <div class="details">
       <p>First Name:</p>
-      <p>{{ firstName }}</p>
+      <p>{{ firstName$ }}</p>
     </div>
     <div class="details">
       <p>Last Name:</p>
-      <p>{{ lastName }}</p>
+      <p>{{ lastName$ }}</p>
     </div>
     <div class="details">
       <p>Age:</p>
