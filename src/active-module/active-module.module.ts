@@ -6,13 +6,15 @@ import { UsersComponent } from 'src/User/user/user.component';
 
 
 
+
 @NgModule({
   declarations: [
-    ActiveComponent
+    ActiveComponent,
   ],
   imports: [
     CommonModule,
-    UserModule
+    UserModule,
+    
   ],
   exports:[ActiveComponent]
 })

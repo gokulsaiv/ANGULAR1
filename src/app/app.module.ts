@@ -11,9 +11,11 @@ import { ManageModule } from 'src/manage/manage.module';
 import { ActiveModuleModule } from 'src/active-module/active-module.module';
 import { DeletedModule } from 'src/deleted/deleted.module';
 import { HomeComponent } from './home/home.component';
+import { TopicsComponent } from './topics/topics.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, TopicsComponent],
 
   exports: [],
   providers: [],
@@ -22,7 +24,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     UserModule,
-
+    HttpClientModule,
     ActiveModuleModule,
     DeletedModule,
   ],

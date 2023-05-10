@@ -3,6 +3,7 @@ import { OnInit } from '@angular/core';
 import { User } from './User.interface';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/Services/user.service';
+import { DeleteService } from 'src/Services/delete.service';
 @Component({
   selector: 'app-users',
   templateUrl: './user.component.html',
@@ -16,7 +17,7 @@ export class UsersComponent implements OnInit {
   DeletePage!: boolean;
   btnLable!: string;
 
-  constructor(private router: ActivatedRoute, private users: UserService) {}
+  constructor(private router: ActivatedRoute, private users: UserService,private del:DeleteService) {}
 
   ngOnInit(): void {
     this.Users = this.users.Users.map((user: User): any => {
@@ -61,7 +62,7 @@ export class UsersComponent implements OnInit {
       };
     }
   }
-  changeUserStatus(id: string) {
-    this.users.changeUserStatus(id);
+  changeUserStatus(id: string,user:any) {
+    this.del.delete(id,user);
   }
 }

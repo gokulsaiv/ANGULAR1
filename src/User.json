@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": "13579",
+      "firstName": "Emily",
+      "lastName": "Wang",
+      "age": 26,
+      "login": "emilywang",
+      "password": "passwordstu",
+      "isDeleted": false
+    },
+    {
+      "id": "24680",
+      "firstName": "Mike",
+      "lastName": "Brown",
+      "age": 35,
+      "login": "mikebrown",
+      "password": "passworddef",
+      "isDeleted": true
+    },
+    {
+      "id": "36912",
+      "firstName": "Sarah",
+      "lastName": "Williams",
+      "age": 29,
+      "login": "sarahwilliams",
+      "password": "passwordghi",
+      "isDeleted": true
+    },
+    {
+      "id": "98765",
+      "firstName": "David",
+      "lastName": "Lee",
+      "age": 38,
+      "login": "davidlee",
+      "password": "passwordjkl",
+      "isDeleted": false
+    },
+    {
+      "id": "45678",
+      "firstName": "Karen",
+      "lastName": "Chen",
+      "age": 27,
+      "login": "karenchen",
+      "password": "passwordmno",
+      "isDeleted": false
+    },
+    {
+      "id": "24601",
+      "firstName": "Tony",
+      "lastName": "Nguyen",
+      "age": 31,
+      "login": "tonynguyen",
+      "password": "passwordpqr",
+      "isDeleted": true
+    },
+    {
+      "id": "13579",
+      "firstName": "Emily",
+      "lastName": "Wang",
+      "age": 26,
+      "login": "emilywang",
+      "password": "passwordstu",
+      "isDeleted": false
+    },
+    {
+      "fistName": "gokul",
+      "lastname": "sai",
+      "login": "gokulsaiv",
+      "password": "kvstopper135",
+      "age": "12",
+      "isDeleted": true,
+      "id": "L6-jAmW"
+    },
+    {
+      "fistName": "gokul",
+      "lastname": "sai ",
+      "login": "vgokul",
+      "password": "kvstopper135",
+      "age": "22",
+      "isDeleted": true,
+      "id": "jg30PNg"
+    },
+    {
+      "firstName": "gokuls",
+      "lastName": "sai",
+      "login": "gsv",
+      "password": "gsv123",
+      "age": "22",
+      "isDeleted": true,
+      "id": "E5Qn-Kl"
+    }
+  ]
+}
